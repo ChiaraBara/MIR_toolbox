@@ -1,0 +1,33 @@
+MIR - Matlab toolbox for the estimation of Mutual Information Rate (MIR) and of complexity and causality decomposition measures in the bivariate framework.
+
+References:
+- R. Pernice, L. Sparacino, V. Bari, F. Gelpi, B. Cairo, G. Mijatovic, Y. Antonacci, D. Tonon, G. Rossato,M. Javorka, and A. Porta, “Spectral decomposition of cerebrovascular and cardiovascular interactions in patients prone to postural syncope and healthy controls,” Auton. Neurosci. 242, 103021 (2022).
+- C. Barà, L. Sparacino, R. Pernice, Y. Antonacci, A. Porta, D. Kugiumtzis, L. Faes (2023). “Comparison of discretization strategies for the model-free information-theoretic assessment of short-term physiological interactions”. Chaos: An Interdisciplinary Journal of Nonlinear Science, 33(3). Editor’s peak selection. 
+- H. Pinto, I. Lazic, Y. Antonacci, R. Pernice, D. Gu, C. Barà, L. Faes, A.P. Rocha (2024). “Testing Dynamic Correlations and Nonlinearity in Bivariate Time Series through Information Measures and Surrogate Data Analysis”. Frontiers in Network Physiology, 4, 1385421. 
+
+Demonstration scripts
+_____________________
+Simulation - Computation of MIR and of both complexity and causality indices for a simulated bivariate linear Gaussian system as the strength of the stochastic oscillation and of the coupling parameter varies
+Application - Analysis of MIR and of both complexity and causality indices on cardiac and systolic arterial pressure dynamics for a representative subject (load data_RR_SAP.mat)
+
+Main computational functions
+_____________________________
+MIR_ObsMat - Generate of the observation matrix
+MIR_SetLag - Sets the vector of indexes for series and lags to build the observation matrix
+MIR_H - Calculate entropy for discrete multidimensional variable by using the frequentistic approach
+MIR_MIRdec_lin - Compute MIR and its decomposition terms (conditional entropy and conditional mutual information terms) via the linear parametric approach 
+MIR_LinReg - Performe the linear regression through least squares model identification
+MIR_idVAR - Estimate prediction coefficient from data
+MIR_Yule - Solve Yule-Walker Equations for a VAR process
+MIR_MIRdec_knn_mex - Compute MIR and its decomposition terms (conditional entropy and conditional mutual information terms) via the model-free k-nearest neighbor approach (this makes use of closed mex functions)
+MIR_MIRdec_knn - Compute MIR and its decomposition terms (conditional entropy and conditional mutual information terms) via the model-free k-nearest neighbor approach
+MIR_quantization - Discretize a series by using the binning approach
+MIR_MIRdec_bin - Compute MIR and its decomposition terms (conditional entropy and conditional mutual information terms) via the binning approach
+MIR_MIRdec_perm - Compute MIR and its decomposition terms (conditional entropy and conditional mutual information terms) via the permutation approach
+MIR_MIRdec_th - Compute theoretical values of MIR and of its decomposition terms for a bivariate linear process from model coefficients
+
+Other functions
+________________
+var_filter - Filter a vector noise with a specified AR model
+theoreticalVAR - Find theoretical parameters for simulated VAR process
+nn_search, nn_prepare, range_search - mex functions for nearest neighbors searching and counting
